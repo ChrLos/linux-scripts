@@ -4,7 +4,7 @@ dwmflexipatch_path="/tmp/dwm-flexipatch"
 patches_location="./patches"
 
 sudo apt install nala -y
-sudo nala install xorg dmenu xdm thunar alacritty pulseaudio alsamixergui lynx j4-dmenu-desktop -y
+sudo nala install xorg dmenu xdm thunar alacritty pulseaudio alsamixergui lynx rofi -y
 
 ./set_max_volume.sh
 
