@@ -33,14 +33,19 @@
 | Alt + 1-9                          | Combining Tags According To What Key Number Pressed | combo             |
 | Alt + s                            | Switch Focus to Last Used Windows                   | swapfocus         |
 | Alt + p                            | Open Application Menu (dmenu)                       | -                 |
+| Alt + Shift + p                    | Open Desktop Application Menu (rofi)                | (self modified)   |
+| Alt + Shift + e                    | Launch Thunar                                       | (self modified)   |
+| Shift + Alt + Enter                | Launch Terminal (alacritty)                         | (self modified)   |
 | Alt + Enter                        | Switch Windows with Master                          | -                 |
 | Alt + h                            | Shifting Master to the Left                         | -                 |
 | Alt + l                            | Shifting Master to the Right                        | -                 |
 | Alt + j or Alt k                   | Focus to Another Window                             | -                 |
-| Shift + Alt + Enter                | Launch Terminal (alacritty)                         | -                 |
+| Alt + t                            | Tile Layout                                         | -                 |
+| Alt + f                            | Monocle Layout (fullscreen)                         | (self modified)   |
+| Alt + m                            | Floating Layout                                     | (self modified)   |
+| Alt + Space                        | Switch with Last Used Layout                        | -                 |
 | Alt + Shift + C                    | Close the Program                                   | -                 |
 | Alt + Shift + q                    | Quit dwm WM                                         | -                 |
-| Alt + Space                        | Switch with Last Used Layout                        | -                 |
 
 # dwm Basic Tutorial
 https://dwm.suckless.org/tutorial/

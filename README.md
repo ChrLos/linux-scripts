@@ -17,8 +17,14 @@ scripts that install dwm window manager with a choice of using the patches or no
 
 [More Documentation](dwm_scripts/README.md)
 
+## nerd_font_download.sh
+download any nerd font automatically
+
 ## network_autoconnect.sh
-A script that aims to automatically turn the interface on and use dhcp
+a script that aims to automatically turn the interface on and use dhcp
 
 ## resolution_setatboot.sh
-Set resolution according to user input for every system boot
+set resolution according to user input for every system boot
+
+## wallpaper_setatboot.sh
+set a wallpaper at runtime and at startup
