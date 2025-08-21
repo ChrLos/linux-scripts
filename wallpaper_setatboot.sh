@@ -6,12 +6,12 @@ delete_prev_settings() {
 }
 
 change_settings() {
-    read -p "Where is you background path location: " bg_location
+    read -p "Where is your background path location: " bg_location
 
     feh --bg-fill $bg_location
 
-    sed -i "1ifeh --bg-fill $bg_location" ~/.xsession
-    sed -i "1ifeh --bg-fill $bg_location" ~/.xinitrc
+    sed -i "2ifeh --bg-fill $bg_location" ~/.xsession
+    sed -i "2ifeh --bg-fill $bg_location" ~/.xinitrc
 
     feh --bg-fill $bg_location
 }
@@ -21,8 +21,8 @@ check_settings() {
         echo "Wallpaper already set"
         read -p "do you want to change it? [y/n]: " user_answer
 
-        if [ user_answer == "y" ]; then
-            delete_prev_settings*
+        if [ $user_answer == "y" ]; then
+            delete_prev_settings
             change_settings
         fi
 
