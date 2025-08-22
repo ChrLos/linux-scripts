@@ -6,7 +6,7 @@ patches_location="./patches"
 sudo apt install nala -y
 sudo nala install xorg dmenu thunar alacritty pulseaudio alsamixergui lynx rofi -y
 
-./set_max_volume.sh
+../volume_set_max.sh
 
 # Required Packages to Compile dwm-flexipatch
 sudo nala install git make gcc libx11-dev libxft-dev libxinerama-dev -y
