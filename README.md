@@ -26,5 +26,8 @@ a script that aims to automatically turn the interface on and use dhcp
 ## resolution_setatboot.sh
 set resolution according to user input for every system boot
 
+## volume_set_max.sh
+unmute speaker and make them to 100%
+
 ## wallpaper_setatboot.sh
 set a wallpaper at runtime and at startup

@@ -21,6 +21,8 @@
   - Better layouts
 - setborderpx_patch https://dwm.suckless.org/patches/setborderpx/
   - Allows border pixels to be changed during runtime
+- vanitygaps https://dwm.suckless.org/patches/vanitygaps/
+  - Adding gaps between different windows
 
 # Keybinds Cheatsheet (With Patches)
 | Keybinds                           | Action                                              | From Patches      |
@@ -41,10 +43,11 @@
 | Alt + l                            | Shifting Master to the Right                        | -                 |
 | Alt + j or Alt k                   | Focus to Another Window                             | -                 |
 | Alt + t                            | Tile Layout                                         | -                 |
-| Alt + f                            | Monocle Layout (fullscreen)                         | (self modified)   |
-| Alt + m                            | Floating Layout                                     | (self modified)   |
+| Alt + f                            | Floating Layout                                     | (self modified)   |
+| Alt + Shift + f                    | Monocle Layout (fullscreen)                         | (self modified)   |
 | Alt + Space                        | Switch with Last Used Layout                        | -                 |
-| Alt + Shift + C                    | Close the Program                                   | -                 |
+| Alt + Tab                          | Switch to Last Visited Tag (Workspace)              | -                 |
+| Alt + Shift + c                    | Close The Program                                   | -                 |
 | Alt + Shift + q                    | Quit dwm WM                                         | -                 |
 
 # dwm Basic Tutorial
