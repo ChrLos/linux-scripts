@@ -43,7 +43,7 @@
 | Alt + l                            | Shifting Master to the Right                        | -                 |
 | Alt + j or Alt k                   | Focus to Another Window                             | -                 |
 | Alt + t                            | Tile Layout                                         | -                 |
-| Alt + f                            | Floating Layout                                     | (self modified)   |
+| Alt + f                            | Floating Layout                                     | -                 |
 | Alt + Shift + f                    | Monocle Layout (fullscreen)                         | (self modified)   |
 | Alt + Space                        | Switch with Last Used Layout                        | -                 |
 | Alt + Tab                          | Switch to Last Visited Tag (Workspace)              | -                 |
