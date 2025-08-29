@@ -21,8 +21,8 @@ if [ "$user_prompt" == "y" ]; then
 fi
 
 # Apply Patches
-sudo cp $patches_location/patches.h $dwmflexipatch_path/patches.h
-sudo cp $patches_location/config.h $dwmflexipatch_path/config.h
+patch -d $dwmflexipatch_path < $patches_location/diff_config.diff
+patch -d $dwmflexipatch_path < $patches_location/diff_patches.diff
 
 # Run dwm session when executing 'startx'
 echo "exec dwm" >~/.xsession

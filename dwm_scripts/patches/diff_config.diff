@@ -1,0 +1,42 @@
+--- config.def.h	2025-08-29 10:28:17.069697475 -0400
++++ config.def.h	2025-08-29 10:50:43.936533454 -0400
+@@ -907,7 +907,9 @@
+ 	#endif // BAR_DMENUMATCHTOP_PATCH
+ 	NULL
+ };
+-static const char *termcmd[]  = { "st", NULL };
++static const char *termcmd[]  = { "alacritty", NULL };
++static const char *rofi[] = { "rofi", "-show", "drun"};
++static const char *thunar[] = { "thunar" };
+ 
+ #if BAR_STATUSCMD_PATCH
+ #if BAR_DWMBLOCKS_PATCH
+@@ -1041,6 +1043,8 @@
+ 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },
+ 	#endif // KEYMODES_PATCH
+ 	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
++	{ MODKEY|ShiftMask,             XK_p,          spawn,                  {.v = rofi } },
++	{ MODKEY|ShiftMask,             XK_e,          spawn,                  {.v = thunar } },
+ 	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
+ 	#if RIODRAW_PATCH
+ 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
+@@ -1219,7 +1223,7 @@
+ 	#endif // XRDB_PATCH | XRESOURCES_PATCH
+ 	{ MODKEY,                       XK_t,          setlayout,              {.v = &layouts[0]} },
+ 	{ MODKEY,                       XK_f,          setlayout,              {.v = &layouts[1]} },
+-	{ MODKEY,                       XK_m,          setlayout,              {.v = &layouts[2]} },
++	{ MODKEY|ShiftMask,             XK_f,          setlayout,              {.v = &layouts[2]} },
+ 	#if COLUMNS_LAYOUT
+ 	{ MODKEY,                       XK_c,          setlayout,              {.v = &layouts[3]} },
+ 	#endif // COLUMNS_LAYOUT
+@@ -1423,8 +1427,8 @@
+ 	{ Mod3Mask|Mod1Mask,            XK_period,       floatpos,               {.v = " 1p  1p" } }, // ↘
+ 	#endif // FLOATPOS_PATCH
+ 	#if SETBORDERPX_PATCH
+-	{ MODKEY|ControlMask,           XK_minus,      setborderpx,            {.i = -1 } },
+-	{ MODKEY|ControlMask,           XK_plus,       setborderpx,            {.i = +1 } },
++	{ MODKEY|ShiftMask,             XK_bracketleft,      setborderpx,            {.i = -2 } },
++	{ MODKEY|ShiftMask,             XK_bracketright,       setborderpx,            {.i = +2 } },
+ 	{ MODKEY|ControlMask,           XK_numbersign, setborderpx,            {.i = 0 } },
+ 	#endif // SETBORDERPX_PATCH
+ 	#if CYCLELAYOUTS_PATCH

@@ -1,0 +1,110 @@
+--- patches.def.h	2025-08-29 10:28:17.077697560 -0400
++++ patches.def.h	2025-08-29 10:38:40.684848394 -0400
+@@ -19,7 +19,7 @@
+  * Awesomebar takes precedence over fancybar.
+  * https://dwm.suckless.org/patches/awesomebar/
+  */
+-#define BAR_AWESOMEBAR_PATCH 0
++#define BAR_AWESOMEBAR_PATCH 1
+ 
+ /* This patch depends on statuscmd patch and adds integration with a (patched)
+  * dwmblocks instance to give a clickable status bar. One must not necessarily
+@@ -495,7 +495,7 @@
+  * This patch takes precedence over ATTACHBELOW_PATCH.
+  * https://dwm.suckless.org/patches/attachaside/
+  */
+-#define ATTACHASIDE_PATCH 0
++#define ATTACHASIDE_PATCH 1
+ 
+ /* This patch adds new clients below the selected client.
+  * This patch takes precedence over ATTACHBOTTOM_PATCH.
+@@ -596,7 +596,7 @@
+  * hold MOD and then press and hold 1 and 3 together.
+  * https://dwm.suckless.org/patches/combo/
+  */
+-#define COMBO_PATCH 0
++#define COMBO_PATCH 1
+ 
+ /* Allow dwm to execute commands from autostart array in your config.h file. When dwm exits
+  * then all processes from autostart array will be killed.
+@@ -607,7 +607,7 @@
+ /* The cyclelayouts patch lets you cycle through all your layouts.
+  * https://dwm.suckless.org/patches/cyclelayouts/
+  */
+-#define CYCLELAYOUTS_PATCH 0
++#define CYCLELAYOUTS_PATCH 1
+ 
+ /* Make dwm respect _MOTIF_WM_HINTS property, and not draw borders around windows requesting
+  * for it. Some applications use this property to notify window managers to not draw window
+@@ -859,7 +859,7 @@
+ /* This patch allows you to move clients around in the stack and swap them with the master.
+  * https://dwm.suckless.org/patches/movestack/
+  */
+-#define MOVESTACK_PATCH 0
++#define MOVESTACK_PATCH 1
+ 
+ /* This patch allows you to change the names of tags during runtime.
+  *
+@@ -948,7 +948,7 @@
+  * monitor (default).
+  * https://dwm.suckless.org/patches/pertag/
+  */
+-#define PERTAG_PATCH 0
++#define PERTAG_PATCH 1
+ 
+ /* Option to enable gaps on a per tag basis rather than globally.
+  * Depends on both pertag and vanitygaps patches being enabled.
+@@ -1116,7 +1116,7 @@
+ /* This patch allows border pixels to be changed during runtime.
+  * https://dwm.suckless.org/patches/setborderpx/
+  */
+-#define SETBORDERPX_PATCH 0
++#define SETBORDERPX_PATCH 1
+ 
+ /* Combines shifttag and shiftview. Basically moves the window to the next/prev tag and follows it.
+  * Also see the focusadjacenttag patch.
+@@ -1243,7 +1243,7 @@
+  * the previously used window.
+  * https://dwm.suckless.org/patches/swapfocus/
+  */
+-#define SWAPFOCUS_PATCH 0
++#define SWAPFOCUS_PATCH 1
+ 
+ /* This patch allows swapping the contents of the currently selected tag with another tag using
+  * keyboard shortcuts.
+@@ -1407,7 +1407,7 @@
+  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-vanitygaps-6.2.diff
+  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-cfacts-vanitygaps-6.2.diff
+  */
+-#define VANITYGAPS_PATCH 0
++#define VANITYGAPS_PATCH 1
+ 
+ /* This patch adds outer gaps for the monocle layout.
+  * Most gaps patches tries to avoid gaps on the monocle layout, as it is often used as a
+@@ -1434,7 +1434,7 @@
+  * when the mouse cursor is (a) on a different screen or (b) on top of a different window.
+  * https://dwm.suckless.org/patches/warp/
+  */
+-#define WARP_PATCH 0
++#define WARP_PATCH 1
+ 
+ /* Sometimes a single application opens different windows depending on the task
+  * at hand and this is often reflected in the WM_WINDOW_ROLE(STRING) x property.
+@@ -1479,7 +1479,7 @@
+  * rather than every window on the screen changing position.
+  * https://dwm.suckless.org/patches/zoomswap/
+  */
+-#define ZOOMSWAP_PATCH 0
++#define ZOOMSWAP_PATCH 1
+ 
+ /**
+  * Layouts
+@@ -1530,7 +1530,7 @@
+  * A revamped, more flexible, and over-the-top version of the original flextile layout.
+  * https://dwm.suckless.org/patches/flextile/ (original)
+  */
+-#define FLEXTILE_DELUXE_LAYOUT 0
++#define FLEXTILE_DELUXE_LAYOUT 1
+ 
+ /* Gappless grid layout.
+  * https://dwm.suckless.org/patches/gaplessgrid/
