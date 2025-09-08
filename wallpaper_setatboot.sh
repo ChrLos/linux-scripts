@@ -19,7 +19,8 @@ change_settings() {
 check_settings() {
     if [ $(grep -cE "feh --bg-fill .*" ~/.xsession) -gt 0 ] || [ $(grep -cE "feh --bg-fill .*" ~/.xinitrc) -gt 0 ]; then
         echo "Wallpaper already set"
-        read -p "do you want to change it? [y/n]: " user_answer
+        read -p "do you want to change it? [Y/n]: " user_answer
+        user_answer=${user_answer:-y}
 
         if [ $user_answer == "y" ]; then
             delete_prev_settings

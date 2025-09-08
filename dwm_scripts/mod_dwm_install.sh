@@ -13,8 +13,9 @@ sudo nala install git make gcc libx11-dev libxft-dev libxinerama-dev -y
 git clone https://github.com/bakkeby/dwm-flexipatch.git $dwmflexipatch_path
 
 # Deleting compiling packages
-read -p "Do you want to delete packages used for compiling dwm to save space? [y/n]: " user_prompt
+read -p "Do you want to delete packages used for compiling dwm to save space? [Y/n]: " user_answer
 echo "(git won't be deleted cause probly gonna be used a lot)"
+user_answer=${user_answer:-y}
 
 if [ "$user_prompt" == "y" ]; then
   sudo nala remove make gcc libx11-dev libxft-dev libxinerama-dev -y

@@ -26,7 +26,8 @@ change_settings() {
 check_settings() {
 	if [ $(grep -cE "xrandr --output .* --mode .*" ~/.xsession) -gt 0 ] || [ $(grep -cE "xrandr --output .* --mode .*" ~/.xinitrc) -gt 0 ]; then
 		echo "Settings already exist"
-		read -p "Do you want to change it? (y/n): " user_answer 
+		read -p "Do you want to change it? (Y/n): " user_answer
+    user_answer=${user_answer:-y}
 
 		if [ "$user_answer" == "y" ]; then
 			delete_prev_settings	
