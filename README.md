@@ -18,7 +18,10 @@ scripts that install dwm window manager with a choice of using the patches or no
 [More Documentation](dwm_scripts/README.md)
 
 ## autologin_tty_setup.sh ([inspo link](https://askubuntu.com/questions/168706/how-do-i-auto-login-as-root-into-the-tty-upon-boot))
-Setup tty autologin by just typing the username
+Setup tty autologin easily
+
+## maintenance_debian-based.sh
+Script to automatically maintain debian-based distros
 
 ## nerd_font_download.sh
 download any nerd font automatically
