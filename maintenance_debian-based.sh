@@ -1,6 +1,9 @@
 #!/bin/bash
 
 system_update-clean() {
+  echo
+  echo "== Update and Clean System =="
+
   sudo nala update
   sudo nala upgrade -y
   sudo nala dist-upgrade -y
@@ -13,7 +16,9 @@ system_update-clean() {
 }
 
 remove_old-kernel() {
+  echo
   echo "== Kernel List =="
+
   readarray -t kernel_list < <(ls /lib/modules)
   ls /lib/modules | awk '{print FNR". " $0}'
   read -p "Kernel to delete, separated by space (1 2): " -a user_answer
@@ -27,15 +32,24 @@ remove_old-kernel() {
 }
 
 update_distrobox-all() {
+  echo
+  echo "== Upgrading Distrobox Container =="
+
   distrobox-upgrade --all
 }
 
 home_clean-cache() {
+  echo
+  echo "== Cleaning Home Cache =="
+
   rm -rf ~/.cache/*
   echo "Home Cache Has Been Cleaned"
 }
 
 system_clean-log() {
+  echo
+  echo "== Cleaning System Log =="
+
   read -p "How many days of log you want to keep? (1d): " user_answer
   user_answer=${user_answer:-1d}
   
@@ -50,7 +64,7 @@ main_screen() {
   echo "Home Cache: $(sudo du -sh ~/.cache | egrep -o '[0-9.]+(\.[0-9]+)?M' || echo '0M')"
   echo "System Log (journalctl): $(sudo journalctl --disk-usage | egrep -o '[0-9.]+(\.[0-9]+)?M' || echo '0M')"
   echo
-  echo "== Maintainance Choices =="
+  echo "== Maintenance Choices =="
   echo "1. Update and Clean System"
   echo "2. Remove Kernel"
   echo "3. Upgrade All Distrobox (distrobox-upgrade)"
