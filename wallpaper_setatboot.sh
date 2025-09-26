@@ -6,20 +6,24 @@ delete_prev_settings() {
 }
 
 change_settings() {
-    read -p "Where is your background path location: " bg_location
+    read -p "Where is your background image folder location: " bg_folder
 
-    feh --bg-fill $bg_location
+    readarray -t bg_location < <(ls $bg_folder/*.{jpg,jpeg,png,webp,tif,tiff,bmp,heif,heic,avif})
+    ls $bg_folder/*.{jpg,jpeg,png,webp,tif,tiff,bmp,heif,heic,avif} | awk '{print FNR". " $0}'
+    read -p "Choose one for the background wallpaper: " user_answer
 
-    sed -i "2ifeh --bg-fill $bg_location" ~/.xsession
-    sed -i "2ifeh --bg-fill $bg_location" ~/.xinitrc
+    set_wallpaper="feh --bg-fill ${bg_location[$user_answer - 1]}"
 
-    feh --bg-fill $bg_location
+    $set_wallpaper
+
+    sed -i "2i$set_wallpaper" ~/.xsession
+    sed -i "2i$set_wallpaper" ~/.xinitrc
 }
 
 check_settings() {
     if [ $(grep -cE "feh --bg-fill .*" ~/.xsession) -gt 0 ] || [ $(grep -cE "feh --bg-fill .*" ~/.xinitrc) -gt 0 ]; then
         echo "Wallpaper already set"
-        read -p "do you want to change it? [Y/n]: " user_answer
+        read -p "Do you want to change it? [Y/n]: " user_answer
         user_answer=${user_answer:-y}
 
         if [ $user_answer == "y" ]; then
