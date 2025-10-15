@@ -34,6 +34,8 @@
 | Alt + Shift + j or Alt + Shift + k | Move Window to Left or Right                        | movestack         |
 | Alt + 1-9                          | Combining Tags According To What Key Number Pressed | combo             |
 | Alt + s                            | Switch Focus to Last Used Windows                   | swapfocus         |
+| Alt + Ctrl + z                     | Hide Focused Window                                 | awesomebar (?)    |
+| Alt + Ctrl + s                     | Unhide All Window                                   | awesomebar (?)    |
 | Alt + p                            | Open Application Menu (dmenu)                       | -                 |
 | Alt + Shift + p                    | Open Desktop Application Menu (rofi)                | (self modified)   |
 | Alt + Shift + e                    | Launch Thunar                                       | (self modified)   |
