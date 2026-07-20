@@ -17,6 +17,11 @@ scripts that install dwm window manager with a choice of using the patches or no
 
 [More Documentation](dwm_scripts/README.md)
 
+## distrobox
+A `distrobox-assemble` automation to create and install necessary application on each container
+
+[More Documentation](distrobox/README.md)
+
 ## autologin_tty_setup.sh ([inspo link](https://askubuntu.com/questions/168706/how-do-i-auto-login-as-root-into-the-tty-upon-boot))
 Setup tty autologin easily
 
