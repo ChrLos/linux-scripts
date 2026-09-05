@@ -1,7 +1,7 @@
 #!/bin/bash
 
 first_install="FALSE" # Change to TRUE before using it, change back to FALSE after use
-# Not changing to TRUE will cause ERROR in init_hooks, just do 'distrobox assemble create --replace'
+# Not changing to TRUE will cause ERROR in init_hooks, just do 'distrobox assemble create --replace' after changing it to TRUE 
 FLAVOR="${FLAVOR:-default}"
 
 if [[ "$first_install" == "FALSE" || "$FLAVOR" == "default" ]]; then
